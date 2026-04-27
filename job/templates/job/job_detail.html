@@ -1,4 +1,5 @@
  {% extends 'base.html' %}
+ {% load i18n %}
  {% load bootstrap4 %}
     {% block body %}
     <!-- bradcam_area  -->
@@ -46,20 +47,20 @@
                     </div>
                     <div class="descript_wrap white-bg">
                         <div class="single_wrap">
-                            <h4>Job description</h4>
+                            <h4>{% trans 'Job description' %}</h4>
                             <p>{{job.description}}</p>
                             
                        
                     </div>
                     <br>
                     <div class="apply_job_form white-bg">
-                        <h4>Apply for the job</h4>
+                        <h4>{% trans 'Apply for the job' %}</h4>
                         <form  method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             {% bootstrap_form form %}
                             {% buttons %}
                         
-                                <button class="boxed-btn3 w-100" type="submit">Apply Now</button>
+                                <button class="boxed-btn3 w-100" type="submit">{% trans 'Apply Now' %}</button>
                             {% endbuttons %}
                         </form>
                     </div>
@@ -68,19 +69,33 @@
                 <div class="col-lg-10 mx-auto">
                     <div class="job_sumary">
                         <div class="summery_header">
-                            <h3>Job Summery</h3>
+                            <h3>{% trans 'Job Summery' %}</h3>
                         </div>
                         <div class="job_content">
                             <ul>
-                                <li>Published on: <span> {{job.puplished_at}}</span></li>
-                                <li>Vacancy: <span>{{job.vacancy}}</span></li>
-                                <li>Salary: <span>{{job.salary}}</span></li>
-                                <li>Location: <span>California, USA</span></li>
-                                <li>Job Nature: <span>{{job.job_type}}</span></li>
-                                <li> experirnce:  <span>{{job.experirnce }}</span></li>
+                                <li>{% trans 'Published on:' %} <span> {{job.puplished_at}}</span></li>
+                                <li>{% trans 'Vacancy:     ' %}<span>{{job.vacancy}}</span></li>
+                                <li>{% trans 'Salary:      ' %}<span>{{job.salary}}</span></li>
+                                <li>{% trans 'Location:    ' %}<span>California, USA</span></li>
+                                <li>{% trans 'Job Nature:  ' %}<span>{{job.job_type}}</span></li>
+                                <li>{% trans ' experirnce: ' %} <span>{{job.experirnce }}</span></li>
                             </ul>
                         </div>
                     </div>
+                     </div>
+                     <center>
+            <div class="form-group mt-3">
+                {% if request.user == job.owner %}
+              <a href="{% url 'jobs:update' job.id %}" class="boxed-btn3">{% trans 'UPDATE' %}</a> 
+              {% else %}
+              
+              {% endif %} 
+              {% if request.user == job.owner %}
+            <a href="{% url 'jobs:job_delete' job.id %}" class="boxed-btn3">{% trans 'DELETE' %}</a>
+              {% endif %}
+            
+            </div>
+        </center>
                     <div class="share_wrap d-flex">
                         <span>Share at:</span>
                         <ul>

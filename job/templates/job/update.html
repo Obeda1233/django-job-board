@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% block body %}
+<div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{% trans 'Job Update' %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div   class="content-wrapper">
+    <!-- Content Header (Page header)
+
+
+    <!-- form start -->
+    <form  method="POST" enctype="multipart/form-data">
+    
+      
+         {% csrf_token %}
+        {% bootstrap_form form %}
+         
+
+        
+      
+         <div class="card-footer">
+        <button type="submit" class="btn btn-primary">{% trans 'Save' %}</button>
+      </div>
+    </form>
+  </div>
+ </div>
+</div>
+
+{% endblock body %}

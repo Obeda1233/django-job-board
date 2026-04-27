@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-10 17:27+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\accounts\templates\accounts\profile.html:26
+msgid "ProFile Summery"
+msgstr " :معلومات الملف الشخصي "
+
+#: .\accounts\templates\accounts\profile.html:30
+msgid "Name:"
+msgstr "لأسم:"
+
+#: .\accounts\templates\accounts\profile.html:31
+msgid "Email:"
+msgstr "البريد الكتروني:"
+
+#: .\accounts\templates\accounts\profile.html:32
+msgid "Phone Number:"
+msgstr "رقم الهاتف:"
+
+#: .\accounts\templates\accounts\profile.html:33
+msgid "Address:"
+msgstr "العنوان:"
+
+#: .\accounts\templates\accounts\profile.html:41
+msgid "Edit Profile"
+msgstr "تعديل الملف الشخصي"
+
+#: .\accounts\templates\accounts\profile.html:46
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\accounts\templates\accounts\profile_edit.html:20
+msgid "Edit ProFile"
+msgstr "تعديل الملف الشخصي"
+
+#: .\accounts\templates\accounts\profile_edit.html:27
+#: .\job\templates\job\update.html:32
+msgid "Save"
+msgstr "حفظ"
+
+#: .\accounts\templates\registration\logged_out.html:5
+msgid "Logged out"
+msgstr "تسجيل الخروج"
+
+#: .\accounts\templates\registration\logged_out.html:8
+msgid "Click here to login again"
+msgstr "انقر هنا الى تسجيل الدخول"
+
+#: .\accounts\templates\registration\login.html:8
+msgid "Your username and password didnt match. Please try again"
+msgstr ""
+
+#: .\accounts\templates\registration\login.html:16
+msgid "Please login to see this page."
+msgstr "رجاء تسجيل الدخول لرؤية  الصفحة "
+
+#: .\accounts\templates\registration\login.html:29
+msgid "Lost password? "
+msgstr "نسيت كلمة المرور؟"
+
+#: .\accounts\templates\registration\login.html:30
+msgid "Signup here if you dont have accounts"
+msgstr "سجل الدخول هنا اذا لم يكن لديك حساب "
+
+#: .\accounts\templates\registration\login.html:31
+msgid "Signup"
+msgstr "انشاء حساب"
+
+#: .\contact\templates\contact\contact.html:12
+msgid "contact"
+msgstr "تواصل معنا "
+
+#: .\contact\templates\contact\contact.html:40
+msgid "Get in Touch"
+msgstr "تواصل معنا"
+
+#: .\contact\templates\contact\contact.html:57
+msgid "Send Message"
+msgstr "ارسال الرسالة"
+
+#: .\contact\templates\contact\contact.html:80
+msgid "Send us your query anytime!"
+msgstr "أرسل لنا في اي وقت"
+
+#: .\home\templates\home\home.html:50
+msgid "Jobs listed"
+msgstr "وظائف متوفرة"
+
+#: .\home\templates\home\home.html:51
+msgid "Find your Dream Job"
+msgstr "جد وظيفة أحلامك"
+
+#: .\home\templates\home\home.html:52
+msgid ""
+"We provide online instant cash loans with quick approval that suit your term "
+"length"
+msgstr "نحن نقدم نقداً فورياً عبر لأنترنت طويلاً مع موافقة سريعة تناسب مدة فترتك"
+
+#: .\home\templates\home\home.html:54
+msgid "GO to your Dream job "
+msgstr "أذهب الى وظيفة أحلامك"
+
+#: .\job\templates\job\add_job.html:11
+msgid "Add New Job"
+msgstr " أضف وظيفة جديدة"
+
+#: .\job\templates\job\add_job.html:26
+msgid "Post New Job"
+msgstr "أنشر وظيفة جديدة "
+
+#: .\job\templates\job\add_job.html:32
+msgid "Post Now"
+msgstr "أنشر لأن"
+
+#: .\job\templates\job\delete.html:10
+msgid "JOB DELETE"
+msgstr "حذف الوظيفة "
+
+#: .\job\templates\job\delete.html:25
+msgid "DELETE JOB"
+msgstr "حذف الوظيفة"
+
+#: .\job\templates\job\delete.html:34
+msgid "Do you realiy want to delete this job?"
+msgstr " هل تريد حقاً حذف هذه الوظيفة"
+
+#: .\job\templates\job\delete.html:40 .\job\templates\job\job_detail.html:94
+msgid "DELETE"
+msgstr "حذف"
+
+#: .\job\templates\job\delete.html:42
+msgid "GO BACK"
+msgstr "أرجع للخلف"
+
+#: .\job\templates\job\job_detail.html:50
+msgid "Job description"
+msgstr "وصف الوظيفة"
+
+#: .\job\templates\job\job_detail.html:57
+msgid "Apply for the job"
+msgstr "تقدم الى هذه الوظيفة"
+
+#: .\job\templates\job\job_detail.html:63 .\job\templates\job\job_list.html:100
+msgid "Apply Now"
+msgstr "تقدم لأن"
+
+#: .\job\templates\job\job_detail.html:72
+msgid "Job Summery"
+msgstr " :متطلبات الوظيفة"
+
+#: .\job\templates\job\job_detail.html:76
+msgid "Published on:"
+msgstr ":نشرت في"
+
+#: .\job\templates\job\job_detail.html:77
+msgid "Vacancy:     "
+msgstr ":المقاعد"
+
+#: .\job\templates\job\job_detail.html:78
+msgid "Salary:      "
+msgstr ":الراتب"
+
+#: .\job\templates\job\job_detail.html:79
+msgid "Location:    "
+msgstr ":المكان"
+
+#: .\job\templates\job\job_detail.html:80
+msgid "Job Nature:  "
+msgstr ":طبيعة العمل"
+
+#: .\job\templates\job\job_detail.html:81
+msgid " experirnce: "
+msgstr ":الخبرة"
+
+#: .\job\templates\job\job_detail.html:89
+msgid "UPDATE"
+msgstr "تعديل"
+
+#: .\job\templates\job\job_list.html:14
+msgid "+ Jobs Available"
+msgstr " وظائف متوافرة"
+
+#: .\job\templates\job\job_list.html:29
+msgid "Filter"
+msgstr "الفلتر"
+
+#: .\job\templates\job\job_list.html:45
+msgid "Job Listing"
+msgstr "لائحة الوظائف"
+
+#: .\job\templates\job\job_list.html:104
+msgid "Date line:"
+msgstr "تاريخ :"
+
+#: .\job\templates\job\update.html:10
+msgid "Job Update"
+msgstr "تعديل الوظيفة"
+
+#: .\setting\templates\setting\setting.html:10
+msgid "SETTINGS"
+msgstr " لأعدادت"
+
+#: .\templates\base.html:57
+msgid "home"
+msgstr "الرئيسة"
+
+#: .\templates\base.html:58
+msgid "Browse Job"
+msgstr "تصفح الوظائف"
+
+#: .\templates\base.html:60
+msgid "Contact"
+msgstr" تواصل معنا"
+
+
+#: .\templates\base.html:61
+msgid "Settings"
+msgstr "لأعدادت"
+
+#: .\templates\base.html:70
+
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\templates\base.html:74
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+#: .\templates\base.html:79
+msgid "Post a Job"
+msgstr "نشر وظيفة"

@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path , include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
+from home  import views 
+
 
 urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
@@ -25,8 +28,25 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('jobs/', include('job.urls',namespace='jobs')),
     path('contact-us/', include('contact.urls',namespace='contact')),
-    path('', include('home.urls',namespace='home')),
+    path('setting/', include('setting.urls',namespace='settings')),
+    
+    path('i18n/',include('django.conf.urls.i18n'))
+    
 ]
+
+urlpatterns += i18n_patterns (
+ path('',views.hone_page,name='home'),
+ path('setting/', include('setting.urls')),
+ path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/',include('accounts.urls')),
+    path('admin/', admin.site.urls),
+    path('jobs/', include('job.urls')),
+    path('contact-us/', include('contact.urls')),
+    path('setting/', include('setting.urls')),
+                             )
+
+
+
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

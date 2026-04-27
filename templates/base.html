@@ -1,6 +1,7 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="{{LANGUAGE_CODE}}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
 
 <head>
     <meta charset="utf-8">
@@ -30,7 +31,7 @@
     <!-- <link rel="stylesheet" href="{% static css/responsive.{% static css"> -->
 </head>
 
-<body>
+<body dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -53,10 +54,11 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="{% url 'home:home'%}">home</a></li>
-                                            <li><a href="{% url 'jobs:job_list'%}">Browse Job</a></li>
+                                            <li><a href="{% url 'home'%}">{% trans 'home' %}</a></li>
+                                            <li><a href="{% url 'jobs:job_list'%}">{% trans 'Browse Job' %}</a></li>
                                             
-                                            <li><a href="{% url 'contact:contect'%}">Contact</a></li>
+                                            <li><a href="{% url 'contact:contect'%}">{% trans 'Contact' %}</a></li>
+                                            <li><a href="{% url 'setting:setting'%}">{% trans 'Settings' %}</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -65,16 +67,16 @@
                                 <div class="Appointment">
                                     {% if request.user.is_authenticated %}
                                      <div class="phone_num d-none d-xl-block">
-                                        <a href="{% url 'accounts:profile'%}">Profile</a>
+                                        <a href="{% url 'accounts:profile'%}">{% trans 'Profile' %}</a>
                                     </div>
                                     {% else %}
                                      <div class="phone_num d-none d-xl-block">
-                                        <a href="{% url 'login'%}">Log in</a>
+                                        <a href="{% url 'login'%}">{%trans 'Log in' %}</a>
                                     </div>
                                     {% endif %}
                                    
                                     <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="{% url 'jobs:add_job'%}">Post a Job</a>
+                                        <a class="boxed-btn3" href="{% url 'jobs:add_job'%}">{% trans 'Post a Job' %}</a>
                                     </div>
                                 </div>
                             </div>

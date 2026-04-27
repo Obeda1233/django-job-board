@@ -1,7 +1,7 @@
 from django.shortcuts import render ,redirect
 from django.urls import reverse
 from .forms import SignupForm , UserForm , ProfileForm
-from django.contrib.auth import authenticate , login
+from django.contrib.auth import authenticate , login ,logout as auth_logout
 from .models import Profile
 
 def signup(request):
@@ -43,3 +43,6 @@ def profile_edit(request):
         userform = UserForm(instance=request.user)
         profileform = ProfileForm(instance=profile)
     return render(request,'accounts/profile_edit.html',{'userform':userform,'profileform':profileform})
+
+def logout(request):
+    return render(request,'accounts/logged_out.html')

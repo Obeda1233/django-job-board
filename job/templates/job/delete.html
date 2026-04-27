@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% block body %}
+<div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{% trans 'JOB DELETE' %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div   class="content-wrapper">
+    <!-- Content Header (Page header)
+
+
+    <!-- form start -->
+    
+    <div  class="card card-danger">
+      <div class="card-header">
+        <h3 class="card-title">{% trans 'DELETE JOB' %}</h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+      <form  method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+      
+        <div class="row">
+          
+       <p class="p-3">{% trans 'Do you realiy want to delete this job?' %}   </p>
+   
+        </div>
+        <!-- /.card-body -->
+  
+        <div class="card-footer">
+          <button type="submit" class="btn btn-danger">{% trans 'DELETE'%}</button>
+  
+          <a href="{% url 'jobs:job_list' %}" type="button" class="btn btn-primary">{% trans 'GO BACK' %}</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+ </div>
+</div>
+
+
+
+{% endblock body %}
